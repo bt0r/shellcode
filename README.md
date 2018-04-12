@@ -10,3 +10,6 @@ Pas de prérequis pour nous rejoindre, juste de la 🙂 bonne ambiance, 🍺 une
 # Nous rejoindre
 
 [Discord](https://discord.gg/KA6Zf)
+
+# Credits
+[ParticlesJS par Vincent Garreau](https://vincentgarreau.com/particles.js/)
