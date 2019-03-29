@@ -1,0 +1,42 @@
+/**
+* Import tailwind
+*/
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+/**
+* Font
+*/
+@font-face {
+	font-family: 'HACKED';
+	font-style: normal;
+	font-weight: 400;
+	font-display: auto;
+	src: local('HACKED'),url('../fonts/HACKED.ttf');
+}
+
+/**
+* Background image
+*/
+@responsive {
+	.bg-cover-image {
+		background-size: cover;
+		background-position: center;
+		background-image: url('../images/background.jpg');
+	}
+}
+
+/**
+* Background gradient animation
+*/
+.bg-gradient-animation {
+	@apply bg-s200;
+	@apply bg-left;
+	transition: background-position 0.6s cubic-bezier(0.390, 0.295, 0.280, 0.865);
+}
+
+.bg-gradient-animation:hover {
+	@apply bg-right;
+}

@@ -1,0 +1,29 @@
+/*
+	SHELLCODE LOGO STYLE
+*/
+
+#shellcode-logo.animated g#left {
+	animation: shellcodeLogoLeft 7.5s cubic-bezier(0.5, 0.31, 0.84, 0.05) infinite forwards;
+}
+
+#shellcode-logo.animated g#right {
+	animation: shellcodeLogoRight 7.5s cubic-bezier(0.5, 0.31, 0.84, 0.05) infinite forwards;
+}
+
+@keyframes shellcodeLogoRight {
+	from, to {
+		transform: translateX(0%);
+	}
+	45% {
+		transform: translateX(2.5%)
+	}
+}
+
+@keyframes shellcodeLogoLeft {
+	from, to {
+		transform: translateX(0%);
+	}
+	45% {
+		transform: translateX(-2.5%)
+	}
+}
