@@ -1,0 +1,63 @@
+{
+	"name": "shellcode",
+	"version": "0.1.0",
+	"private": true,
+	"homepage": "https://preview.redekproject.fr/shellcode",
+	"scripts": {
+		"build:css": "postcss src/assets/styles/index.src.css -o src/assets/styles/index.css --env production",
+		"watch:css": "postcss src/assets/styles/index.src.css -o src/assets/styles/index.css -w",
+		"start": "npm run watch:css & react-scripts-ts start",
+		"build": "npm run build:css && react-scripts-ts build",
+		"test": "react-scripts-ts test --env=jsdom",
+		"eject": "react-scripts-ts eject",
+		"prettier": "prettier --write --parser typescript",
+		"lint": "tslint --fix -p ."
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.json": [
+			"prettier --write --parser json",
+			"git add"
+		],
+		"*.md": [
+			"prettier --write --parser markdown",
+			"git add"
+		],
+		"*.{ts,tsx}": [
+			"prettier --write --parser typescript",
+			"tslint --fix -p .",
+			"git add"
+		]
+	},
+	"dependencies": {
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-particles-js": "^2.5.1",
+		"react-scripts-ts": "^3.1.0"
+	},
+	"devDependencies": {
+		"@fullhuman/postcss-purgecss": "^1.1.0",
+		"@types/jest": "^23.3.14",
+		"@types/node": "^10.14.4",
+		"@types/react": "^16.8.10",
+		"@types/react-dom": "^16.8.3",
+		"autoprefixer": "^9.5.0",
+		"babel-eslint": "^10.0.1",
+		"cssnano": "^4.1.10",
+		"husky": "^1.3.1",
+		"lint-staged": "^7.3.0",
+		"postcss-cli": "^6.1.2",
+		"prettier": "^1.16.4",
+		"tailwindcss": "^0.6.6",
+		"tailwindcss-plugins": "^0.1.4",
+		"tslib": "^1.9.3",
+		"tslint": "^5.14.0",
+		"tslint-config-prettier": "^1.18.0",
+		"tslint-react-a11y": "^1.0.0",
+		"typescript": "^3.3.4000"
+	}
+}
