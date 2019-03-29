@@ -2,7 +2,6 @@
 	"name": "shellcode",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://preview.redekproject.fr/shellcode",
 	"scripts": {
 		"build:css": "postcss src/assets/styles/index.src.css -o src/assets/styles/index.css --env production",
 		"watch:css": "postcss src/assets/styles/index.src.css -o src/assets/styles/index.css -w",
